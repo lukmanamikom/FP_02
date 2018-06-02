@@ -77,36 +77,38 @@
         <div class="row justify-content-md-between">
           <!-- Item Image -->
           <div class="col-md-6 mb-7 mb-md-0">
-           <div id="demo" class="carousel slide" data-ride="carousel">
-              <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-              </ul>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets/img/kaos/kaos_birumuda.png" class="img-fluid">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/img/kaos/kaos_birutua.png" class="img-fluid">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/img/kaos/kaos_hijau.png" class="img-fluid">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </a>
-              <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </a>
-            </div>
+            <img src="assets/img/kaos/kaos_putih.png" class="img-fluid">
           </div>
           <div class="col-md-5">
             <div class="mb-5">
               <h1 class="text-white font-weight-normal">The Front t-shirt</h1>
-              <span class="d-block h3 text-white mb-3">$25</span>
-              <p class="text-white">Our Front Design Makeup collection – to create your coolest look, then switch it up again tomorrow. Make every day, night and everything in-between as extraordinary as you are.</p>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <label class="h6 small d-block text-uppercase text-white">
+                  Pilih Warna
+                </label>
+              </div>
+                <div class="row px-3" style="height: 50px">
+                  <a class="col-2 bg-danger" href="#" style="border: 1px solid #fff;"></a>
+                  <a class="col-2 bg-info" href="#" style="border: 1px solid #fff;"></a>
+                  <a class="col-2 bg-warning" href="#" style="border: 1px solid #fff;"></a>
+                  <a class="col-2 bg-lgight" href="#" style="border: 1px solid #fff;"></a>
+                  <a class="col-2 bg-success" href="#" style="border: 1px solid #fff;"></a>
+                  <a class="col-2 bg-secondary" href="#" style="border: 1px solid #fff;"></a>
+                </div>
+            </div>
+            <div class="w-lg-75 mb-2">
+              <label class="h6 small d-block text-uppercase text-white">
+                  Pilih Ukuran
+              </label>
+              <select name="ukuran" class="form-control">
+                <option value="s">S</option>
+                <option value="s">M</option>
+                <option value="s">L</option>
+                <option value="s">XL</option>
+                <option value="s">Big</option>
+              </select>
             </div>
             <div class="w-lg-75 mb-5">
               <div class="d-flex justify-content-between">
@@ -117,19 +119,12 @@
                   Size guide
                 </a>
               </div>
-              <select class="custom-select">
-                <option selected>Pilih Ukuran</option>
-                <option value="sizeSelect1">S</option>
-                <option value="sizeSelect2">M</option>
-                <option value="sizeSelect3">L</option>
-                <option value="sizeSelect4">XL</option>
-              </select>
               <div class="d-flex justify-content-between mt-2">
                 <label class="h6 small d-block text-uppercase text-white">
                   Jumlah
                 </label>
               </div>
-              <input type="number" name="jumlah" class="form-control">
+              <input type="number" name="jumlah" min="1" max="100" class="form-control" value="1">
             </div>
             <a class="btn bg-light transition-3d-hover" href="cart.html">
               <span class="fa fa-cart-arrow-down mr-2"></span>

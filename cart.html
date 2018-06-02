@@ -12,11 +12,11 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/customesia.css">
 </head>
 <body>
-<header id="header" >
+<header id="header" class="u-header">
     <div>
       <div id="logoAndNav" class="container">
         <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar">
-          <a class="navbar-brand" href="" aria-label="Front">
+          <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-top-space" href="" aria-label="Front">
             <img src="assets/img/costumnesia-fixx.png" width="200">
           </a>
           <button type="button" class="navbar-toggler btn u-hamburger"
@@ -32,6 +32,9 @@
           <div id="navBar" class="collapse navbar-collapse py-3">
             <ul class="navbar-nav ml-lg-auto">
               <li class="nav-item mx-2">
+              	<a href="" class="nav-link">BUAT DESAIN</a>
+              </li>
+              <li class="nav-item mx-2">
               	<a href="" class="nav-link">KATALOG</a>
               </li>
               <li class="nav-item mx-2">
@@ -41,10 +44,10 @@
               	<a href="" class="nav-link">LOGIN</a>
               </li>
               <li class="nav-item mx-2">
-              	<a href="" class="nav-link"><i class="fa fa-user"></i> REGISTER</a>
+              	<a href="" class="nav-link">REGISTER</a>
               </li>
               <li class="nav-item ml-2">
-              	<a href="" class="nav-link btn btn-outline-primary"><i class="fa fa-pencil"></i> BUAT DESAIN</a>
+              	<a href="" class="nav-link btn btn-outline-primary">BUAT DESAIN</a>
               </li>
             </ul>
           </div>
@@ -71,137 +74,80 @@
     </div>
   </header>
   <main id="content" role="main">
-    <div class="position-relative u-gradient-half-primary-v1 overflow-hidden">
-      <div class="col-md-6 position-absolute-top-left-0--md u-content-centered-y--md pl-0 mb-3 mb-md-0">
-        <img class="img-fluid" src="assets/img/kaos/kaos_misty.png" alt="Image Description">
-      </div>
-      <div class="container u-space-3">
-        <div class="row justify-content-md-end">
-          <div class="col-md-6">
-            <div class="mb-5">
-              <span class="d-block lead text-white mb-2">Low price T-shirts for daily use.</span>
-              <h1 class="display-4 font-size-48--md-down text-white font-weight-bold">Marvelous gifts from Front.</h1>
-            </div>
-            <a class="js-go-to btn text-primary u-btn-white transition-3d-hover" href="#"
-               data-target="#shopItemsContent"
-               data-type="static">
-              Start Shopping
-            </a>
-          </div>
+    <div class="u-bg-light-blue-50">
+      <div class="container u-space-1">
+        <div class="mb-6">
+          <h1 class="h2 font-weight-normal mb-3">Keranjang Belanja</h1>
         </div>
-      </div>
-    </div>
-    <div id="shopItemsContent" class="container u-space-3">
-      <div class="row mx-gutters-5">
-        <div class="col-sm-6 col-lg-4 mb-9 mb-5">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/kaos/kaos_misty.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h2 class="h5 mb-1">Longline pocket</h2>
-              <span class="d-block">$25</span>
-            </div>
-          </a>
+        <div class="table-responsive-sm mb-6">
+          <table class="table table-borderless bg-white mb-0">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="media align-items-center">
+                    <div class="d-flex mr-3">
+                      <img class="rounded" src="assets/img/kaos/kaos_birumuda.png" width="50" height="50"  alt="Image Description">
+                    </div>
+                    <div class="media-body">
+                      <h2 class="h6 mb-0">Kaos</h2>
+                      <small class="d-block text-secondary">Small</small>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle">
+                  <div class="input-group u-form" style="width: 50px">
+                    <input class="form-control" type="number" value="1">
+                  </div>
+                </td>
+                <td class="align-middle">IDR 156.000</td>
+                <td class="align-middle text-center">
+                  <button type="button" class="close float-none">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-5">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/kaos/kaos_birumuda.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">The white mug</h3>
-              <span class="d-block">$7</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-5">
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/kaos/kaos_birutua.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">The Front t-shirt</h3>
-              <span class="d-block">$19</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-sm-6 col-lg-4 mb-9 mb-lg-0">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/hoodie/hoodie_pink.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">Snapback cap</h3>
-              <span class="d-block">$9</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-lg-0">
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/hoodie/hoodie_merah.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">Hoodie</h3>
-              <span class="d-block">$29</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/hoodie/hoodie_navy.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">The Front t-shirt</h3>
-              <span class="d-block">$19</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-lg-0">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/mug/mug_hitam.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">Snapback cap</h3>
-              <span class="d-block">$9</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-lg-0">
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/mug/mug_maroon.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">Hoodie</h3>
-              <span class="d-block">$29</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/mug/mug_putih.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">The Front t-shirt</h3>
-              <span class="d-block">$19</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-	  <div class="position-relative u-gradient-half-primary-v1 u-space-3-top u-space-4-bottom">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-12 col-lg-7 col-xl-6">
-            <div class="text-center mb-4">
-              <span class="bg-light p-2 mb-3">Subscribe</span>
-              <h2 class="h1 text-white font-weight-normal">Stay in the know</h2>
-              <p class="lead u-text-light">Get special offers on the latest developments from Front.</p>
-            </div>
-            <form class="js-validate js-form-message mb-2">
-              <div class="js-focus-state input-group input-group-lg u-form u-form--lg u-form--white-brd">
-                <input type="email" class="form-control u-form__input" name="email" required
-                       placeholder="Enter your email address"
-                       aria-label="Enter your email address">
-                <div class="input-group-append u-form__append">
-                  <button type="submit" class="btn btn-warning u-btn-wide">Join Front</button>
-                </div>
+        <div class="row justify-content-lg-between mt-2">
+          <div class="col-md-6 col-lg-5 mb-7 mb-md-0">
+            <div class="bg-white rounded p-3">
+              <div class="custom-control custom-radio d-flex align-items-center small text-muted">
+                <input type="radio" class="custom-control-input" id="deliveryRadio1" name="deliveryRadio" checked>
+                <label class="custom-control-label ml-1" for="deliveryRadio1">
+                  <span class="d-block h6 text-dark font-weight-normal mb-1"><strong class="text-dark">IDR 40.000</strong> - Standard delivery</span>
+                  <span class="d-block">Pengiriman membutuhkan waktu 2-3 hari</span>
+                </label>
               </div>
-            </form>
+            </div>
+            <hr class="my-0">
+            <div class="bg-white rounded p-3">
+              <div class="custom-control custom-radio d-flex align-items-center small text-muted">
+                <input type="radio" class="custom-control-input" id="deliveryRadio2" name="deliveryRadio">
+                <label class="custom-control-label ml-1" for="deliveryRadio2">
+                  <span class="d-block h6 text-dark font-weight-normal mb-1"><strong class="text-dark">IDR 60.000</strong> - Express delivery</span>
+                  <span class="d-block">Pengiriman membutuhkan waktu 1-2 hari</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 mt-md-auto">
+            <div class="media float-md-right">
+              <div class="d-flex flex-column mr-4">
+                <h3 class="h5 mb-0">Total: IDR 196.000</h3>
+              </div>
+              <div class="media-body">
+                <a class="btn btn-primary u-btn-primary transition-3d-hover" href="checkout.html">Checkout</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -210,12 +156,12 @@
   <footer>
     <div class="container">
       <div class="row justify-content-lg-between u-space-2">
-      	<div class="col-12 col-sm-4">
+        <div class="col-12 col-sm-4">
           <div class="mb-2">
-        		<img src="assets/img/costumnesia-fixx.png" width="150">
+            <img src="assets/img/costumnesia-fixx.png" width="150">
           </div>
           <p>Customesia adalah perusahaan di bidang industri kreatif yang fokus pada produk-produk merchandise. Sesuai dengan visi dan misi kami yang ingin memberikan kepuasan terhadap pelanggan dengan cara merealisasikan sebuah gambar digital menjadi produk yang bermakna.</p>
-      	</div>
+        </div>
         <div class="col-6 col-sm-4 col-lg-3 order-lg-2 ml-lg-auto mb-7 mb-lg-0">
           <!-- Title -->
           <h3 class="h6 font-weight-bold">Account</h3>
