@@ -74,145 +74,107 @@
     </div>
   </header>
   <main id="content" role="main">
-    <div class="position-relative u-gradient-half-primary-v1 overflow-hidden">
-      <div class="col-md-6 position-absolute-top-left-0--md u-content-centered-y--md pl-0 mb-3 mb-md-0">
-        <img class="img-fluid" src="assets/img/kaos/kaos_misty.png" alt="Image Description">
-      </div>
-      <div class="container u-space-3">
-        <div class="row justify-content-md-end">
-          <div class="col-md-6">
-            <div class="mb-5">
-              <span class="d-block lead text-white mb-2">Low price T-shirts for daily use.</span>
-              <h1 class="display-4 font-size-48--md-down text-white font-weight-bold">Marvelous gifts from Front.</h1>
+    <!-- Hero Section -->
+    <div class="u-gradient-half-primary-v1">
+      <div class="container u-space-2">
+        <div class="row justify-content-md-between">
+          <!-- Item Image -->
+          <div class="col-md-6 mb-7 mb-md-0">
+           <div id="demo" class="carousel slide" data-ride="carousel">
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+              </ul>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/kaos/kaos_birumuda.png" class="img-fluid">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kaos/kaos_birutua.png" class="img-fluid">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/kaos/kaos_hijau.png" class="img-fluid">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
             </div>
-            <a class="js-go-to btn text-primary u-btn-white transition-3d-hover" href="#"
-               data-target="#shopItemsContent"
-               data-type="static">
-              Start Shopping
+          </div>
+          <div class="col-md-5">
+            <div class="mb-5">
+              <h1 class="text-white font-weight-normal">The Front t-shirt</h1>
+              <span class="d-block h3 text-white mb-3">$25</span>
+              <p class="text-white">Our Front Design Makeup collection – to create your coolest look, then switch it up again tomorrow. Make every day, night and everything in-between as extraordinary as you are.</p>
+            </div>
+            <div class="w-lg-75 mb-5">
+              <div class="d-flex justify-content-between">
+                <label class="h6 small d-block text-uppercase text-white">
+                  Size
+                </label>
+                <a class="h6 small d-block text-uppercase u-link-light text-white" data-toggle="modal" data-target="#sizeguide">
+                  Size guide
+                </a>
+              </div>
+              <select class="custom-select">
+                <option selected>Pilih Ukuran</option>
+                <option value="sizeSelect1">S</option>
+                <option value="sizeSelect2">M</option>
+                <option value="sizeSelect3">L</option>
+                <option value="sizeSelect4">XL</option>
+              </select>
+              <div class="d-flex justify-content-between mt-2">
+                <label class="h6 small d-block text-uppercase text-white">
+                  Jumlah
+                </label>
+              </div>
+              <input type="number" name="jumlah" class="form-control">
+            </div>
+            <a class="btn u-btn-white--air transition-3d-hover" href="cart.html">
+              <span class="fa fa-cart-arrow-down mr-2"></span>
+              Add to Cart
             </a>
           </div>
         </div>
       </div>
     </div>
-    <div id="shopItemsContent" class="container u-space-3">
-      <div class="row mx-gutters-5">
-        <div class="col-sm-6 col-lg-4 mb-9 mb-5">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/kaos/kaos_misty.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h2 class="h5 mb-1">Longline pocket</h2>
-              <span class="d-block">$25</span>
-            </div>
-          </a>
+    <div class="container u-space-3">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 mb-5 mb-md-0">
+          <h2 class="h6">Product details</h2>
+          <ul class="text-secondary pl-3">
+            <li>A failsafe wardrobe addition</li>
+            <li>Crew neck</li>
+            <li>Long sleeves</li>
+            <li>Front logo print</li>
+            <li>Looser in the chest and hem</li>
+            <li>Oversized fit – falls generously over the body</li>
+          </ul>
         </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-5">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/kaos/kaos_birumuda.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">The white mug</h3>
-              <span class="d-block">$7</span>
-            </div>
-          </a>
+        <div class="col-sm-6 col-md-4 mb-5 mb-md-0">
+          <h3 class="h6">Material &amp; care</h3>
+          <ul class="text-secondary pl-3">
+            <li>100% Cotton</li>
+            <li>Machine wash cold, with like colors</li>
+            <li>Only non-chlorine bleach</li>
+            <li>Tumble dry low</li>
+            <li>Low iron if needed</li>
+            <li>Do not dry clean</li>
+          </ul>
         </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-5">
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/kaos/kaos_birutua.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">The Front t-shirt</h3>
-              <span class="d-block">$19</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-sm-6 col-lg-4 mb-9 mb-lg-0">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/hoodie/hoodie_pink.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">Snapback cap</h3>
-              <span class="d-block">$9</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-lg-0">
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/hoodie/hoodie_merah.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">Hoodie</h3>
-              <span class="d-block">$29</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/hoodie/hoodie_navy.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">The Front t-shirt</h3>
-              <span class="d-block">$19</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-lg-0">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/mug/mug_hitam.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">Snapback cap</h3>
-              <span class="d-block">$9</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-9 mb-lg-0">
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/mug/mug_maroon.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">Hoodie</h3>
-              <span class="d-block">$29</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <!-- Shop Item -->
-          <a class="d-block text-dark text-center transition-3d-hover" href="single-product.html">
-            <img class="img-fluid rounded" src="assets/img/mug/mug_putih.png" alt="Image Description">
-            <div class="pt-4 px-4">
-              <h3 class="h5 mb-1">The Front t-shirt</h3>
-              <span class="d-block">$19</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-	  <div class="position-relative u-gradient-half-primary-v1 u-space-3-top u-space-4-bottom">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-12 col-lg-7 col-xl-6">
-            <!-- Title -->
-            <div class="text-center mb-4">
-              <span class="u-label u-label--sm u-label--white mb-2">Subscribe</span>
-              <h2 class="h1 text-white font-weight-normal">Stay in the know</h2>
-              <p class="lead u-text-light">Get special offers on the latest developments from Front.</p>
-            </div>
-            <form class="js-validate js-form-message mb-2">
-              <div class="js-focus-state input-group input-group-lg u-form u-form--lg u-form--white-brd">
-                <input type="email" class="form-control u-form__input" name="email" required
-                       placeholder="Enter your email address"
-                       aria-label="Enter your email address"
-                       data-msg="Please enter a valid email address."
-                       data-error-class="u-has-error"
-                       data-success-class="u-has-success">
-                <div class="input-group-append u-form__append">
-                  <button type="submit" class="btn btn-warning u-btn-wide">Join Front</button>
-                </div>
-              </div>
-            </form>
-            <div class="d-block d-xl-none">
-              <p class="small u-text-light mb-0">Be the lucky user to earn <span class="text-white font-weight-bold">$1000</span> bonus now!</p>
-            </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="mb-4">
+            <h4 class="h6">Look after me</h4>
+            <p class="mb-0">Avoid post-wash regrets.</p>
+            <p class="mb-0">Always check the label.</p>
           </div>
+          <h4 class="h6">About me</h4>
+          <p class="mb-0">Basic jersey fabric.</p>
+          <p class="mb-0">Does what it says on the tin.</p>
         </div>
       </div>
     </div>
@@ -227,11 +189,7 @@
           <p>Customesia adalah perusahaan di bidang industri kreatif yang fokus pada produk-produk merchandise. Sesuai dengan visi dan misi kami yang ingin memberikan kepuasan terhadap pelanggan dengan cara merealisasikan sebuah gambar digital menjadi produk yang bermakna.</p>
       	</div>
         <div class="col-6 col-sm-4 col-lg-3 order-lg-2 ml-lg-auto mb-7 mb-lg-0">
-          <!-- Title -->
           <h3 class="h6 font-weight-bold">Account</h3>
-          <!-- End Title -->
-
-          <!-- List -->
           <ul class="list-unstyled u-list">
             <li><a class="u-list__link" href="#">Keranjang Belanja</a></li>
             <li><a class="u-list__link" href="#">Metode Pengiriman</a></li>
@@ -240,9 +198,7 @@
             <li><a class="u-list__link" href="#">Bantuan Pengguna</a></li>
           </ul>
         </div>
-
         <div class="col-6 col-sm-4 col-lg-3 order-lg-3 mb-7 mb-lg-0">
-          <!-- Title -->
           <h3 class="h6 font-weight-bold">Company</h3>
           <ul class="list-unstyled u-list">
             <li><a class="u-list__link" href="#">Tentang Kami</a></li>
@@ -300,5 +256,20 @@
   <script type="text/javascript" src="assets/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <div class="modal fade" id="sizeguide" tabindex="-1" role="dialog" aria-labelledby="sizeguide" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Panduan Ukuran</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Ntar disini.</p>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
