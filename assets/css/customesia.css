@@ -1703,3 +1703,4 @@ button:focus {
 .border-bottom-1 {
   border-bottom: 1px solid #eee;
 }
+#shopItemsContent a:hover { text-decoration: none }
