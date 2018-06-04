@@ -32,8 +32,8 @@
                         </label>
                         <div class="input-group u-form">
                           <input class="form-control" type="text" required
-                                 placeholder="Davin"
-                                 aria-label="Davin">
+                                 placeholder="Email"
+                                 aria-label="Email">
                         </div>
                       </div>
                     </div>
@@ -69,13 +69,13 @@
                 <hr>
                 <div class="h4 text-center">Alternatif Login</div>
                 <div class="py-3 text-center">
-                  <a href="" class="bg-primary text-white p-2 mr-2 rounded">
+                 <a href="" onclick="login()" value="Log in with facebook" class="bg-primary text-white p-2 mr-2 rounded">
                     <span class="fa fa-facebook-f"></span> facebook
-                  </a> 
-                  <a href="" class="bg-danger text-white p-2 mr-2 rounded">
-                    <span class="fa fa-google"></span> gmail
                   </a>
-                </div>
+                  <a href="" class="bg-danger text-white p-2 mr-2 rounded">
+                    <span class=" g-signin2 fa fa-google" data-onsucces="onSignIn"></span> gmail
+                  </a>
+                </div>  
                 <hr>
                 <div class="text-center align-items-center">
                   <a href="index.html"><span class="fa fa-angle-left mr-2"></span> Kembali ke halaman utama</a>
@@ -90,5 +90,28 @@
   <script type="text/javascript" src="assets/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script>
+      function login() {
+        FB.login(function(response){
+          console.log(response);
+        })
+      }
+   window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1935193619931492',
+      xfbml      : true,
+      version    : 'v3.0'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>
