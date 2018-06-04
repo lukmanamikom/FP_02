@@ -8,3 +8,6 @@ Costumesia adalah online portal/online shop dimana pembeli dapat melakukan custo
 * Febrilia Endah K. (16.11.0130)
 * David Kurniawan (16.11.0126)
 ```
+
+# Screenshot
+![Image of Customnesia](https://github.com/lukmanamikom/FP_02/raw/master/assets/img/screenshot.png)
