@@ -281,9 +281,24 @@
       </div>
     </div>
     </div>
+    <a class="btn btn-success scroll-top" href="https://api.whatsapp.com/send?phone=089618676114&text=Halo,%20saya%20masih%20bingung%20dengan%20customnesia,%20bisa%20dijelaskan%20cara%20pesannya?" target="_blank">
+      <i class="fa fa-whatsapp"></i> Support
+    </a>
   </footer>
   <script type="text/javascript" src="assets/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('.scroll-top').fadeIn();
+      } else {
+        $('.scroll-top').fadeOut();
+      }
+    });
+
+  });
+  </script>
 </body>
 </html>
