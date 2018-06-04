@@ -10,6 +10,33 @@
   <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
   <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/customesia.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+    var app = angular.module("myShoppingList", []); 
+    app.controller("myCtrl", function($scope) {
+        $scope.products = [
+            ["The Hoodie Biru Muda", "assets/img/hoodie/hoodie_birumuda.png", 189000, 1],
+            ["The Hoodie Biru Tua", "assets/img/hoodie/hoodie_birutua.png", 189000, 1],
+            ["The Kaos Hijau", "assets/img/kaos/kaos_hijau.png", 157000, 1],
+            ["The Mugs Kerens", "assets/img/mug/mug_putih.png", 55000, 2],
+            ["The Totebag Kerens", "assets/img/totebag/totebag.png",114000, 1]
+            ];
+        $scope.addItem = function () {
+            $scope.products.push($scope.addMe);
+        }    
+        $scope.removeItem = function(x) {
+            $scope.products.splice(x, 1);
+        }
+        $scope.total = function() {
+          var total = 0;
+          angular.forEach($scope.products, function(x) {
+              total += x[3] * x[2];
+          })
+
+          return total;
+      }
+    });
+    </script>
 </head>
 <body>
 <header id="header" >
@@ -65,7 +92,7 @@
       </div>
     </div>
   </header>
-  <main id="content" role="main">
+  <main id="content" role="main" ng-app="myShoppingList" ng-controller="myCtrl">
     <div class="u-bg-light-blue-50">
       <div class="container u-space-1">
         <div class="mb-6">
@@ -77,31 +104,30 @@
               <tr>
                 <th>Item</th>
                 <th>Jumlah</th>
-                <th>Harga</th>
+                <th class="text-right">Harga</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr ng-repeat="x in products">
                 <td>
                   <div class="media align-items-center">
                     <div class="d-flex mr-3">
-                      <img class="rounded" src="assets/img/kaos/kaos_birumuda.png" width="50" height="50"  alt="Image Description">
+                      <img class="rounded" src="{{x[1]}}" width="50" height="50"  alt="{{x[1]}}">
                     </div>
                     <div class="media-body">
-                      <h2 class="h6 mb-0">Kaos</h2>
-                      <small class="d-block text-secondary">Small</small>
+                      <h2 class="h6 mb-0">{{x[0]}}</h2>
                     </div>
                   </div>
                 </td>
                 <td class="align-middle">
                   <div class="input-group u-form" style="width: 50px">
-                    <input class="form-control" type="number" value="1">
+                    <input class="form-control" ng:model="x[3]" type="number" value="{{x[3]}}" min="1" max="100">
                   </div>
                 </td>
-                <td class="align-middle">IDR 156.000</td>
+                <td class="text-right">{{x[2] * x[3] | currency :"Rp "}}</td>
                 <td class="align-middle text-center">
-                  <button type="button" class="close float-none">
+                  <button type="button" class="close float-none"  ng-click="removeItem($index)">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </td>
@@ -134,7 +160,7 @@
           <div class="col-md-6 col-lg-5 mt-md-auto">
             <div class="media float-md-right">
               <div class="d-flex flex-column mr-4">
-                <h3 class="h5 mb-0">Total: IDR 196.000</h3>
+                <h3 class="h5 mb-0">Total: {{total() | currency : "Rp " }}</h3>
               </div>
               <div class="media-body">
                 <a class="btn btn-primary u-btn-primary transition-3d-hover" href="checkout.html">Checkout</a>

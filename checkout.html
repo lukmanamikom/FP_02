@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Customesia</title>
+  <title>Customnesia</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,9 +10,39 @@
   <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
   <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/customesia.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+    var app = angular.module("myShoppingList", []); 
+    app.controller("myCtrl", function($scope) {
+        $scope.products = [
+            ["The Hoodie Biru Muda", "assets/img/hoodie/hoodie_birumuda.png", 189000, 1],
+            ["The Hoodie Biru Tua", "assets/img/hoodie/hoodie_birutua.png", 189000, 1],
+            ["The Kaos Hijau", "assets/img/kaos/kaos_hijau.png", 157000, 1],
+            ["The Mugs Kerens", "assets/img/mug/mug_putih.png", 55000, 2],
+            ["The Totebag Kerens", "assets/img/totebag/totebag.png",114000, 1]
+            ];
+        $scope.removeItem = function(x) {
+            $scope.products.splice(x, 1);
+        }
+        $scope.total = function() {
+          var total = 0;
+          angular.forEach($scope.products, function(x) {
+              total += x[3] * x[2];
+          })
+
+          return total;
+        }
+        $scope.diskon =  function(harga){
+          return harga * 0.1;
+        }
+        $scope.shipping = function(){
+          return 30000;
+        }
+    });
+    </script>
 </head>
 <body>
-<header id="header" >
+<header id="header">
     <div>
       <div id="logoAndNav" class="container">
         <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar">
@@ -65,7 +95,7 @@
       </div>
     </div>
   </header>
-  <main id="content" role="main">
+  <main id="content" role="main"  ng-app="myShoppingList" ng-controller="myCtrl">
     <div class="container u-space-1">
       <div class="mb-9">
         <h1 class="h2 font-weight-normal">Checkout</h1>
@@ -76,53 +106,44 @@
             <h2 class="h5">Order summary</h2>
           </div>
           <div class="shadow-sm rounded p-5">
-            <div class="media align-items-center mb-5">
+            <div class="media align-items-center mb-5" ng-repeat="x in products">
               <div class="d-flex position-relative mr-3">
-                <img class="rounded" src="assets/img/hoodie/hoodie_birumuda.png" width="50" height="50" alt="Image Description">
-                <span class="badge">1</span>
+                <img class="rounded" src="{{x[1]}}" width="50" height="50" alt="{{x[0]}}">
+                <span class="badge">{{x[3]}}</span>
               </div>
               <div class="media-body">
-                <h2 class="h6 mb-0">Hoodie</h2>
-                <small class="d-block text-secondary">S</small>
+                <h2 class="h6 mb-0">{{x[0]}}</h2>
               </div>
               <div class="media-body text-right">
-                <span>IDR 267.000</span>
-              </div>
-            </div>
-            <div class="media align-items-center">
-              <div class="d-flex position-relative mr-3">
-                <img class="u-md-avatar rounded" src="assets/img/totebag/totebag.png" width="50" height="50" alt="Image Description">
-                <span class="u-badge u-badge-primary u-badge-pos rounded-circle">1</span>
-              </div>
-              <div class="media-body">
-                <h2 class="h6 mb-0">Totebag</h2>
-              </div>
-              <div class="media-body text-right">
-                <span>IDR 114.000</span>
+                <span>{{x[2] * x[3] | currency: "Rp "}}</span>
               </div>
             </div>
             <hr class="my-5">
-            <form class="js-focus-state input-group u-form" method="post" action="thankyou.html">
-              <input type="search" class="form-control u-form__input" placeholder="Discount" aria-label="Discount">
+            <form class="js-focus-state input-group u-form mb-2" method="post" action="thankyou.html">
+              <input type="search" class="form-control u-form__input" placeholder="Discount" aria-label="Discount" id="#diskon">
               <div class="input-group-append">
                 <button type="button" class="btn btn-primary u-btn-primary">Apply</button>
               </div>
             </form>
+            <div class="bg-success text-white rounded p-3">
+                Diskon 10% Berhasil di tambahkan
+              </div>
             <hr class="my-5">
             <div class="media align-items-center">
               <div class="d-flex mr-3">
                 <h3 class="h6 text-secondary">Subtotal</h3>
               </div>
               <div class="media-body text-right">
-                <span>IDR 281.000</span>
+                <span>{{ total() | currency: "Rp "}}</span>
               </div>
             </div>
+            <hr>
             <div class="media align-items-center">
               <div class="d-flex mr-3">
                 <h3 class="h6 text-secondary">Pengiriman</h3>
               </div>
               <div class="media-body text-right">
-                <span>IDR 21.000</span>
+                <span>{{shipping() | currency : "Rp "}}</span>
               </div>
             </div>
             <hr class="my-5">
@@ -131,7 +152,7 @@
                 <h3 class="h6 text-secondary">Total</h3>
               </div>
               <div class="media-body text-right">
-                <strong>IDR 302.000</strong>
+                <strong>{{total() - diskon(total()) + shipping() | currency: "Rp "}}</strong>
               </div>
             </div>
           </div>
@@ -403,9 +424,26 @@
       </div>
     </div>
     </div>
+    <a class="btn btn-success scroll-top" href="https://api.whatsapp.com/send?phone=089618676114&text=Halo,%20saya%20masih%20bingung%20dengan%20customnesia,%20bisa%20dijelaskan%20cara%20pesannya?" target="_blank">
+      <i class="fa fa-whatsapp"></i> Support
+    </a>
   </footer>
   <script type="text/javascript" src="assets/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('.scroll-top').fadeIn();
+      } else {
+        $('.scroll-top').fadeOut();
+      }
+    });
+
+  });
+  </script>
 </body>
 </html>
